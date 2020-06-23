@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- ======================================================================= -->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  div {
+    max-width: 95%;
+    margin:auto;
+    padding: 10px;
+  }
+
+  .table-like {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  /* .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  } */
+
+  .vert-cent {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    max-width: 1100px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+</style>
+<!-- ======================================================================= -->
+
+<!-- Start : Google Analytics Code -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64069893-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64069893-4');
+</script> -->
+<!-- End : Google Analytics Code -->
+
+<script type="text/javascript" src="resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+<div max-width=100%>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/png" href="resources/seal_icon.png">
+  <title>Simple and Effective VAE Training with Calibrated Decoders</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://github.com/orybkin/sigma-vae/" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:site_name" content="Sigma-VAE" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Simple and Effective VAE Training with Calibrated Decoders" />
+  <meta property="og:description" content="Rybkin, Daniilidis, Levine. Simple and Effective VAE Training with Calibrated Decoders. 2020." />
+  <meta property="og:url" content="https://github.com/orybkin/sigma-vae/" />
+  <meta property="og:image" content="https://orybkin.github.io/sigma-vae/resources/teaser.png" />
+  <!-- <meta property="og:video" content="our_future_video" /> -->
+
+  <meta property="article:publisher" content="https://github.com/orybkin/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Simple and Effective VAE Training with Calibrated Decoders" />
+  <meta name="twitter:description" content="Rybkin, Daniilidis, Levine. Simple and Effective VAE Training with Calibrated Decoders. 2020." />
+  <meta name="twitter:url" content="https://github.com/orybkin/sigma-vae/" />
+  <meta name="twitter:image" content="https://orybkin.github.io/sigma-vae/resources/teaser.png" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="https://orybkin.github.io/sigma-vae/resources/teaser.png" />
+  <!-- <meta name="twitter:player" content="our_future_video" /> -->
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+</head>
+
+<body>
+
+      <br>
+      <center><span style="font-size:44px;font-weight:bold;">Simple and Effective VAE Training </br> with Calibrated Decoders</span></center><br/>
+      <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;">
+          <div><center><span style="font-size:24px"><a href="https://www.seas.upenn.edu/~oleh/" target="_blank">Oleh Rybkin</a></span></center>
+          <center><span style="font-size:24px">UPenn</span></center>
+          </div>
+
+          <div><center><span style="font-size:24px"><a href="https://www.cis.upenn.edu/~kostas/" target="_blank">Kostas Daniilidis</a></span></center>
+          <center><span style="font-size:24px">UPenn</span></center>
+          </div>
+
+          <div><center><span style="font-size:24px"><a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">Sergey Levine</a></span></center>
+          <center><span style="font-size:24px">UC Berkeley</span></center>
+          </div>
+      </div>
+
+      <div class="table-like" style="justify-content:space-evenly;max-width:700px;margin:auto;padding:5px">
+        <div><center><span style="font-size:28px"><a href="our_future_pdf">[Paper]</a></span></center></div>
+        <div><center><span style="font-size:28px"><a href='https://github.com/orybkin/sigma-vae'>[GitHub Code]</a></span></center> </div>
+      </div>
+
+      <!-- <center>
+      <iframe width="768" height="432" max-width="100%" src="resources/video.m4v" frameborder="0" allowfullscreen></iframe></center> -->
+      <br>
+
+      <div style="width:800px; margin:0 auto; text-align=right;">
+        Common implementations of VAE models, such as image VAEs or sequential video VAEs, use the MSE loss for reconstruction, and tune a heuristic weight on the KL divergence term of the objective. This MSE loss corresponds to a log-likelihood of a Gaussian decoder distribution with a certain constant variance. However, as we show in the paper, the assumption of constant variance is actually very problematic! Instead, it is better to learn the variance of the decoder, so that the decoding distribution is <i>calibrated</i>. We propose a simple method for learning such variance that empirically improves sample quality for multiple VAE and sequence VAE models. Moreover, we find that the weight on the KL divergence term can be simply set to one, as our method automatically balances the two terms of the objective. Our method improves performance over naive decoder choices, reduces the need for hyperparameter tuning, and can be implemented in 5 lines of code.
+      </div>
+      <br><hr>
+
+      <!-- <center><h1>Goal-Conditioned Hierarchical Prediction and Plannning</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=right">
+        We use a goal-conditioned hierarchical prediction model to perform long-term planning.
+      </div>
+      <center><a href="resources/teaser.png"><img src = "resources/teaser.png" width="1000px" ></img></a><br></center>
+      <hr> -->
+      <center id="sourceCode"><h1>σ-VAE</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=right;">
+        When training a Gaussian Mixture Model with constant variance (left), very different results are obtained for different values of variance. With large variance, the Gaussians aren't able to specialize and collapse into a single Gaussian, while with low variance the Gaussians become overly sharp. Similarly, when setting the <it>variance of the decoding distribution</it> of a VAE to be constant (right), the resulting samples will be blurry if the variance is too high  (due to posterior collapse)  and unrealistic if the variance is too low. This can be remedied by tuning a heuristic weight on the KL divergence term, However, we observe that simply by learning the variance end-to-end with the ELBO we can find the variance that produces good samples.
+      </div>
+      <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;align-self:center">
+
+        <div>
+          <center><h3> Gaussian Mixture Model </h3></center>
+          <a href="resources/results/9room_rec.gif"><img src="resources/gmm_animation.gif" height="300px"></img></a>
+        </div>
+
+        <div>
+          <center><h3> σ-VAE </h3></center>
+          <a href="resources/results/9room_rec.gif"><img src="resources/celeba_animation.gif" height="300px"></img></a>
+        </div>
+      </div>
+      <br><hr>
+
+
+      <center id="sourceCode"><h1>Samples</h1></center>
+      <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px">
+        <div>
+          <center><h3> Gaussian VAE </h3></center>
+          <a href="resources/results/celeba_gaussian.png"><img width=400 src="resources/results/celeba_gaussian.png"></img></a></br>
+          <a href="resources/results/cifar_gaussian.png"><img width=400 src="resources/results/cifar_gaussian.png"></img></a></br>
+          <a href="resources/results/svhn_gaussian.png"><img width=400 src="resources/results/svhn_gaussian.png"></img></a></br>
+          <a href="resources/results/bair_gaussian.png"><img width=400 src="resources/results/bair_gaussian.png"></img></a></br>
+        </div>
+
+        <div style="width:400">
+          <center><h3> σ-VAE </h3></center>
+          <a href="resources/results/celeba_sigma.png"><img width=400 src="resources/results/celeba_sigma.png"></img></a></br>
+          <a href="resources/results/cifar_sigma.png"><img width=400 src="resources/results/cifar_sigma.png"></img></a></br>
+          <a href="resources/results/svhn_sigma.png"><img width=400 src="resources/results/svhn_sigma.png"></img></a></br>
+          <a href="resources/results/bair_sigma.png"><img width=400 src="resources/results/bair_sigma.png"></img></a></br>
+        </div>
+      </div>
+      <div style="width:800px; margin:0 auto; text-align=right;">
+        A typical Gausssian VAE with unit variance (left) does not control the balance between the reconstruction and the KL-divergence loss and produces suboptimal, blurry samples. σ-VAE automatically balances the objective through learning the variance, which acts as a balance factor on the loss.
+      </div>
+      </br><hr>
+
+
+      <center id="sourceCode"><h1>Source Code</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=right">
+      We released minimalistic implementations of the method in PyTorch and TensorFlow. It only takes 5 lines of code to try σ-VAE with your VAE model!
+      </div>
+      <span style="font-size:28px">
+      <div class="table-like">
+        <div><a href='link'>[Torch: GitHub]</a></div>
+        <div><a href='link'>[Torch: Colab]</a></div>
+        <div><a href='link'>[TF: GitHub]</a></div>
+        <div><a href='link'>[TF: Colab]</a></div>
+      </div>
+      </span>
+      <br><hr>
+
+      <table align=center width=850px>
+        <center><h1>Paper and Bibtex</h1></center>
+        <tr>
+        <td width=250px align=left>
+        <!-- <p style="margin-top:4px;"></p> -->
+        <a href="our_future_pdf"><img style="height:150px" src="resources/thumbnail.png"/></a>
+        <center>
+        <!-- <span style="font-size:20pt"><a href="our_future_pdf">[Paper]</a> -->
+        <!-- <span style="font-size:20pt"><a href="our_future_abtract">[ArXiv]</a> -->
+        <!-- <span style="font-size:20pt"><a href="resources/slides.pdf">[Slides]</a></span>
+        <span style="font-size:20pt"><a href="resources/poster.pdf">[Poster]</a></span> -->
+        </center>
+        </td>
+        <td width=50px align=center>
+        </td>
+        <td width=550px align=left>
+        <!-- <p style="margin-top:4px;"></p> -->
+        <p style="text-align:left;"><b><span style="font-size:20pt">Citation</span></b><br/><span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt">Oleh Rybkin, Kostas Daniilidids, Sergey Levine. <b>Simple and Effective VAE Training with Calibrated Decoders.<br/></b></span></p>
+        <!-- <p style="margin-top:20px;"></p> -->
+        <span style="font-size:20pt"><a shape="rect" href="javascript:togglebib('sigma2020_bib')" class="togglebib">[Bibtex]</a></span>
+        </td>
+        </tr>
+        <tr>
+        <td width=250px align=left>
+        </td>
+        <td width=50px align=center>
+        </td>
+        <td width=550px align=left>
+          <div class="paper" id="sigma2020_bib">
+<pre xml:space="preserve">
+@misc{rybkin2020sigmavae,
+    title={Simple and Effective VAE Training
+    with Calibrated Decoders},
+    author={Oleh Rybkin and Kostas Daniilidis
+    and Sergey Levine},
+    year={2020},
+}</pre>
+          </div>
+          </td>
+          </tr>
+      </table>
+    <br><hr>
+
+
+      <!-- <div style="width:800px; margin:0 auto; text-align=center">
+        <br>
+        <center>Code and full paper to be released soon.</center>
+      </div> -->
+      </table>
+
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</div>
+</body>
+</html>
