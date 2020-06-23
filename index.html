@@ -241,7 +241,7 @@
       <div style="width:800px; margin:0 auto; text-align=right;">
         When training a Gaussian Mixture Model with constant variance (left), very different results are obtained for different values of variance. With large variance, the Gaussians aren't able to specialize and collapse into a single Gaussian, while with low variance the Gaussians become overly sharp. Similarly, when setting the <it>variance of the decoding distribution</it> of a VAE to be constant (right), the resulting samples will be blurry if the variance is too high  (due to posterior collapse)  and unrealistic if the variance is too low. This can be remedied by tuning a heuristic weight on the KL divergence term, However, we observe that simply by learning the variance end-to-end with the ELBO we can find the variance that produces good samples.
       </div>
-      <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;align-self:center">
+      <div class="table-like" style="justify-content:space-evenly;max-width:1000px;margin:auto;padding:0px;align-self:center">
 
         <div>
           <center><h3> Gaussian Mixture Model </h3></center>
@@ -252,7 +252,13 @@
           <center><h3> σ-VAE </h3></center>
           <a href="resources/results/9room_rec.gif"><img src="resources/celeba_animation.gif" height="300px"></img></a>
         </div>
-      </div>
+      </div></br>
+
+      <div style="width:800px; margin:0 auto; text-align=right;">
+        There are several design choices for learning the variance. The naive way would be to output a per pixel variance as another channel of the decoder (left). However, we empirically find that this often gives suboptimal results. Instead, learning a shared variance that is independent of the latent (center) often works better. We can further improve the optimization of this shared variance through an analytic solution (right). We call the resulting method σ-VAE.
+      </div></br>
+      <center><a href="resources/method.png"><img src = "resources/method.png" width="800px"></img></a><br></center>
+
       <br><hr>
 
 
