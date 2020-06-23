@@ -239,7 +239,7 @@
       <hr> -->
       <center id="sourceCode"><h1>σ-VAE</h1></center>
       <div style="width:800px; margin:0 auto; text-align=right;">
-        When training a Gaussian Mixture Model with constant variance (left), very different results are obtained for different values of variance. With large variance, the Gaussians aren't able to specialize and collapse into a single Gaussian, while with low variance the Gaussians become overly sharp. Similarly, when setting the <it>variance of the decoding distribution</it> of a VAE to be constant (right), the resulting samples will be blurry if the variance is too high  (due to posterior collapse)  and unrealistic if the variance is too low. This can be remedied by tuning a heuristic weight on the KL divergence term, However, we observe that simply by learning the variance end-to-end with the ELBO we can find the variance that produces good samples.
+        When training a Gaussian Mixture Model with constant variance (left), very different results are obtained for different values of variance. With large variance, the Gaussians aren't able to specialize and collapse into a single Gaussian, while with low variance the Gaussians become overly sharp. Similarly, when setting the <it>variance of the decoding distribution</it> of a VAE to be constant (right), the resulting samples will be blurry if the variance is too high  (due to posterior collapse)  and unrealistic if the variance is too low. This can be remedied by tuning a heuristic weight on the KL divergence term, however, we observe that we can find the variance that produces good samples by learning the variance end-to-end with the ELBO.
       </div>
       <div class="table-like" style="justify-content:space-evenly;max-width:1000px;margin:auto;padding:0px;align-self:center">
 
@@ -249,7 +249,7 @@
         </div>
 
         <div>
-          <center><h3> σ-VAE </h3></center>
+          <center><h3> VAE </h3></center>
           <a href="resources/results/9room_rec.gif"><img src="resources/celeba_animation.gif" height="300px"></img></a>
         </div>
       </div></br>
@@ -292,11 +292,11 @@
       </div>
       <span style="font-size:28px">
       <div class="table-like" style="width:1000px">
-        <div><a href='link'>[Torch: GitHub]</a></div>
-        <div><a href='link'>[Torch: Colab]</a></div>
-        <div><a href='link'>[TF: GitHub]</a></div>
+        <div><a href='https://github.com/orybkin/sigma-vae-pytorch'>[Torch: GitHub]</a></div>
+        <div><a href='https://colab.research.google.com/drive/1mQr1SkiSQLhCSsVaj4R7XLcinknwHiV8?usp=sharing'>[Torch: Colab]</a></div>
+        <div><a href='https://github.com/orybkin/sigma-vae-tensorflow'>[TF: GitHub]</a></div>
         <div><a href='link'>[TF: Colab]</a></div>
-        <div><a href='link'>[SVG]</a></div>
+        <div><a href='https://github.com/orybkin/svg'>[SVG]</a></div>
       </div>
       </span>
       <br><hr>
