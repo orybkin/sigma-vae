@@ -9,4 +9,4 @@ Below is the list of released implementations, including σ-VAE in PyTorch, Tens
 * [[TensorFlow Colab]](https://colab.research.google.com/drive/1XstWM57-LyIogBCcKgtvUmo6b7bVhuNM?usp=sharing) 
 * [[SVG]](https://github.com/orybkin/svg)
 
-Feel free Let me know if you have any questions by opening an issue or at <oleh@seas.upenn.edu>
+Feel free to let me know if you have any questions by opening an issue or at <oleh@seas.upenn.edu>
