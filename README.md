@@ -6,5 +6,7 @@ Below is the list of released implementations, including σ-VAE in PyTorch, Tens
 * [[PyTorch GitHub]](https://github.com/orybkin/sigma-vae-pytorch) 
 * [[PyTorch Colab]](https://colab.research.google.com/drive/1mQr1SkiSQLhCSsVaj4R7XLcinknwHiV8?usp=sharing)
 * [[TensorFlow GitHub]](https://github.com/orybkin/sigma-vae-tensorflow) 
-* TensorFlow Colab coming soon!
+* [[TensorFlow Colab]](https://colab.research.google.com/drive/1XstWM57-LyIogBCcKgtvUmo6b7bVhuNM?usp=sharing) 
 * [[SVG]](https://github.com/orybkin/svg)
+
+Feel free Let me know if you have any questions by opening an issue or at <oleh@seas.upenn.edu>
