@@ -202,8 +202,8 @@
 <body>
 
       <br>
-      <center><span style="font-size:44px;font-weight:bold;">Simple and Effective VAE Training </br> with Calibrated Decoders</span></center><br/>
-      <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;">
+      <center><span style="font-size:44px;font-weight:bold;">Simple and Effective VAE Training <br> with Calibrated Decoders</span></center><br/>
+      <div class="table-like" style="justify-content:space-evenly;max-width:600px;margin:auto;">
           <div><center><span style="font-size:24px"><a href="https://www.seas.upenn.edu/~oleh/" target="_blank">Oleh Rybkin</a></span></center>
           <center><span style="font-size:24px">UPenn</span></center>
           </div>
@@ -217,7 +217,7 @@
           </div>
       </div>
 
-      <div class="table-like" style="justify-content:space-evenly;max-width:700px;margin:auto;padding:5px">
+      <div class="table-like" style="justify-content:space-evenly;max-width:500px;margin:auto;padding:5px">
         <div><center><span style="font-size:28px"><a href="https://arxiv.org/pdf/2006.13202.pdf">[Paper]</a></span></center></div>
         <div><center><span style="font-size:28px"><a href='https://github.com/orybkin/sigma-vae'>[GitHub Code]</a></span></center> </div>
       </div>
@@ -241,43 +241,54 @@
       <div style="width:800px; margin:0 auto; text-align=right;">
         When training a Gaussian Mixture Model with constant variance (left), very different results are obtained for different values of variance. With large variance, the Gaussians aren't able to specialize and collapse into a single Gaussian, while with low variance the Gaussians become overly sharp. Similarly, when setting the <it>variance of the decoding distribution</it> of a VAE to be constant (right), the resulting samples will be blurry if the variance is too high  (due to posterior collapse)  and unrealistic if the variance is too low. This can be remedied by tuning a heuristic weight on the KL divergence term, however, we observe that we can find the variance that produces good samples by learning the variance end-to-end with the ELBO.
       </div>
-      <div class="table-like" style="justify-content:space-evenly;max-width:1000px;margin:auto;padding:0px;align-self:center">
+      <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;align-self:center">
 
         <div>
           <center><h3> Gaussian Mixture Model </h3></center>
-          <a href="resources/results/9room_rec.gif"><img src="resources/gmm_animation.gif" height="300px"></img></a>
+          <a href="resources/gmm_animation.gif"><img src="resources/gmm_animation.gif" height="350px"></img></a>
         </div>
 
         <div>
           <center><h3> VAE </h3></center>
-          <a href="resources/results/9room_rec.gif"><img src="resources/celeba_animation.gif" height="300px"></img></a>
+          <a href="resources/celeba_animation.gif"><img src="resources/celeba_animation.gif" height="350px"></img></a>
         </div>
       </div></br>
 
       <div style="width:800px; margin:0 auto; text-align=right;">
         There are several design choices for learning the variance. The naive way would be to output a per pixel variance as another channel of the decoder (left). However, we empirically find that this often gives suboptimal results. Instead, learning a shared variance that is independent of the latent (center) often works better. We can further improve the optimization of this shared variance through an analytic solution (right). We call the resulting method σ-VAE.
       </div></br>
-      <center><a href="resources/method.png"><img src = "resources/method.png" width="800px"></img></a><br></center>
+      <center><a href="resources/method.png"><img src = "resources/method.png" width="1000px"></img></a><br></center>
 
       <br><hr>
 
 
-      <center id="sourceCode"><h1>Samples</h1></center>
+      <center id="sourceCode"><h1>Image Samples</h1></center>
       <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px">
         <div>
           <center><h3> Gaussian VAE </h3></center>
-          <a href="resources/results/celeba_gaussian.png"><img width=400 src="resources/results/celeba_gaussian.png"></img></a></br>
-          <a href="resources/results/cifar_gaussian.png"><img width=400 src="resources/results/cifar_gaussian.png"></img></a></br>
-          <a href="resources/results/svhn_gaussian.png"><img width=400 src="resources/results/svhn_gaussian.png"></img></a></br>
-          <a href="resources/results/bair_gaussian.png"><img width=400 src="resources/results/bair_gaussian.png"></img></a></br>
+          <a href="resources/results/celeba_gaussian.png"><img width=450 src="resources/results/celeba_gaussian.png"></img></a></br>
+          <a href="resources/results/cifar_gaussian.png"><img width=450 src="resources/results/cifar_gaussian.png"></img></a></br>
+          <a href="resources/results/svhn_gaussian.png"><img width=450 src="resources/results/svhn_gaussian.png"></img></a></br>
         </div>
 
-        <div style="width:400">
+        <div>
           <center><h3> σ-VAE </h3></center>
-          <a href="resources/results/celeba_sigma.png"><img width=400 src="resources/results/celeba_sigma.png"></img></a></br>
-          <a href="resources/results/cifar_sigma.png"><img width=400 src="resources/results/cifar_sigma.png"></img></a></br>
-          <a href="resources/results/svhn_sigma.png"><img width=400 src="resources/results/svhn_sigma.png"></img></a></br>
-          <a href="resources/results/bair_sigma.png"><img width=400 src="resources/results/bair_sigma.png"></img></a></br>
+          <a href="resources/results/celeba_sigma.png"><img width=450 src="resources/results/celeba_sigma.png"></img></a></br>
+          <a href="resources/results/cifar_sigma.png"><img width=450 src="resources/results/cifar_sigma.png"></img></a></br>
+          <a href="resources/results/svhn_sigma.png"><img width=450 src="resources/results/svhn_sigma.png"></img></a></br>
+        </div>
+      </div>
+      <center id="sourceCode"><h1>Video Samples</h1></center>
+
+      <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px">
+        <div>
+          <center><h3> Gaussian VAE </h3></center>
+          <a href="resources/results/bair_gaussian.gif"><img width=450 src="resources/results/bair_gaussian.gif"></img></a></br>
+        </div>
+
+        <div>
+          <center><h3> σ-VAE </h3></center>
+          <a href="resources/results/bair_sigma.gif"><img width=450 src="resources/results/bair_sigma.gif"></img></a></br>
         </div>
       </div>
       <div style="width:800px; margin:0 auto; text-align=right;">
@@ -291,7 +302,7 @@
       We released minimalistic implementations of the method in PyTorch and TensorFlow. It only takes 5 lines of code to try σ-VAE with your VAE model! We have also released an implementation of σ-VAE with the <a href='https://sites.google.com/view/svglp/'>Stochastic Video Generation</a> (SVG) method.
       </div>
       <span style="font-size:28px">
-      <div class="table-like" style="width:1000px">
+      <div class="table-like" style="width:800px">
         <div><a href='https://github.com/orybkin/sigma-vae-pytorch'>[Torch: GitHub]</a></div>
         <div><a href='https://colab.research.google.com/drive/1mQr1SkiSQLhCSsVaj4R7XLcinknwHiV8?usp=sharing'>[Torch: Colab]</a></div>
         <div><a href='https://github.com/orybkin/sigma-vae-tensorflow'>[TF: GitHub]</a></div>
@@ -301,7 +312,7 @@
       </span>
       <br><hr>
 
-      <table align=center width=850px>
+      <table align=center width=800px>
         <center><h1>Paper and Bibtex</h1></center>
         <tr>
         <td width=250px align=left>
