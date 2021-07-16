@@ -240,6 +240,11 @@
       <hr> -->
       <center id="sourceCode"><h1>σ-VAE</h1></center>
       <div style="width:800px; margin:0 auto; text-align=right;">
+        We note a correspondence between the hyperparameter β from β-VAE and the variance of the VAE decoder. By learning the variance of the decoder with ELBO, which we call σ-VAE, we can automatically train the balance weight between the two objective to be the optimal weight, producing good samples and avoiding extra hypeparameter tuning.
+      </div>
+
+      <center><a href="resources/teaser.mov"><video src="resources/teaser.mov" width="1100px" autoplay muted loop></video></a></center></br>
+      <!-- <div style="width:800px; margin:0 auto; text-align=right;">
         When training a Gaussian Mixture Model with constant variance (left), very different results are obtained for different values of variance. With large variance, the Gaussians aren't able to specialize and collapse into a single Gaussian, while with low variance the Gaussians become overly sharp. Similarly, when setting the <it>variance of the decoding distribution</it> of a VAE to be constant (right), the resulting samples will be blurry if the variance is too high  (due to posterior collapse)  and unrealistic if the variance is too low. This can be remedied by tuning a heuristic weight on the KL divergence term, however, we observe that we can find the variance that produces good samples by learning the variance end-to-end with the ELBO.
       </div>
       <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px;align-self:center">
@@ -253,7 +258,7 @@
           <center><h3> VAE </h3></center>
           <a href="resources/celeba_animation.gif"><img src="resources/celeba_animation.gif" height="350px"></img></a>
         </div>
-      </div></br>
+      </div></br> -->
 
       <div style="width:800px; margin:0 auto; text-align=right;">
         There are several design choices for learning the variance. The naive way would be to output a per pixel variance as another channel of the decoder (left). However, we empirically find that this often gives suboptimal results. Instead, learning a shared variance that is independent of the latent (center) often works better. We can further improve the optimization of this shared variance through an analytic solution (right). We call the resulting method σ-VAE.
